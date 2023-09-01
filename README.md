@@ -8,7 +8,8 @@ This project has been created using Next js, and it showcases how UrbanVerde Das
 To get started with the UrbanVerde IOT  Dashboard, follow these steps:
 
 -Clone the Repository: Clone this repository to your local machine.
-`https://github.com/yourusername/urbanverde-iot-dashboard.git`
+
+```https://github.com/yourusername/urbanverde-iot-dashboard.git```
 
 -Install Dependencies
 
