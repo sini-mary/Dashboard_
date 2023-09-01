@@ -35,12 +35,4 @@ npm run dev
 Access by opening a web browser and navigating to
 ```
 `http://localhost:3000
-````.
-
-
-
-
-
-
-
-
+````
