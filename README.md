@@ -9,14 +9,9 @@ To get started with the UrbanVerde IOT  Dashboard, follow these steps:
 
 -Clone the Repository: Clone this repository to your local machine.
 
-```https://github.com/yourusername/urbanverde-iot-dashboard.git```
-
-```html
-<clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
-  Copy path
-</clipboard-copy>
-<div id="blob-path">src/index.js</div>
+``` html https://github.com/yourusername/urbanverde-iot-dashboard.git
 ```
+
 
 -Install Dependencies
 
