@@ -1,7 +1,6 @@
 # UrbanVerde IoT Dashboard
 
 This project has been created using Next js, and it showcases how UrbanVerde Dashboard looks like.
- is built using Next.js, ensuring a fast and responsive web application.
 
 ### Getting Started
 
