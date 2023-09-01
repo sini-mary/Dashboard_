@@ -9,7 +9,7 @@ To get started with the UrbanVerde IOT  Dashboard, follow these steps:
 -Clone the Repository: Clone this repository to your local machine.
 
 ```
-html https://github.com/yourusername/urbanverde-iot-dashboard.git
+https://github.com/yourusername/urbanverde-iot-dashboard.git
 ```
 
 
@@ -33,5 +33,5 @@ npm run dev
 
 Access by opening a web browser and navigating to
 ```
-`http://localhost:3000
+http://localhost:3000
 ````
