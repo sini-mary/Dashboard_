@@ -4,10 +4,15 @@ The UrbanVerde IoT Dashboard is designed to display real-time data collected fro
 
 ## Features
 
--Real-time Data Visualization: View water flow rates and temperature data in real time.
+-Real-time Data Visualization: View water flow rates and temperature data in real-time.
+
 -Data History: Access historical data for a day, a week, and a month to track trends and patterns.
+
 -User-Friendly Interface: The dashboard is designed with a user-friendly and intuitive interface for easy navigation.
+
 -Interactive Charts and Graphs: Interactive charts provide a dynamic and informative way to explore data.
+
+
 -Next.js Framework: The project is built using Next.js, ensuring a fast and responsive web application.
 
 ### Getting Started
@@ -15,18 +20,25 @@ The UrbanVerde IoT Dashboard is designed to display real-time data collected fro
 To get started with the UrbanVerde IOT  Dashboard, follow these steps:
 
 -Clone the Repository: Clone this repository to your local machine.
-git clone https://github.com/yourusername/urbanverde-iot-dashboard.git
+`git clone https://github.com/yourusername/urbanverde-iot-dashboard.git`
 
 -Install Dependencies: Navigate to the project directory and install the required dependencies for this case you will be required to install NextJs.
-cd urbanverde-iot-dashboard
-npm install
+
+
+`cd urbanverde-iot-dashboard`
+
+
+`npm install`
 
 -Configuration: Configure the dashboard to connect to your IoT devices and data sources. Update the necessary environment variables to establish the connection.
 
 -Run the Application: Start the Next.js development server.
-npm run dev
 
-5. Access the Dashboard: Open your web browser and navigate to http://localhost:3000 to access the UrbanVerde IoT Dashboard.
+
+`npm run dev`
+
+
+- Access the Dashboard: Open your web browser and navigate to http://localhost:3000 to access the UrbanVerde IoT Dashboard.
 
 ## Usage
 
