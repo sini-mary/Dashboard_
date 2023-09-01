@@ -28,13 +28,13 @@ npm run dev
 
 Once you have the dashboard up and running, you can:
 
-Select the desired time interval (day, week, month) for both water flow rate and temperature data.
-View interactive charts and graphs that visualize the data.
-Analyze trends and make informed decisions based on the information presented.
+-Select the desired time interval (day, week, month) for both water flow rate and temperature data.
+-View interactive charts and graphs that visualize the data.
+-Analyze trends and make informed decisions based on the information presented.
 
 ## Technologies Used
 
-Next.js: A React framework for building fast and responsive web applications.
-IoT Sensors: The dashboard connects to IoT sensors to retrieve data.
-Charting Libraries: Libraries like Chart.js are used to create interactive charts.
-Environmental Data Processing: Backend services for data processing and retrieval.
+-Next.js
+-IoT Sensors: The dashboard connects to IoT sensors to retrieve data.
+-Charting Libraries: Libraries like Chart.js are used to create interactive charts.
+-Environmental Data Processing: Backend services for data processing and retrieval.
