@@ -1,6 +1,6 @@
-
 workflow
 name: Next.js CI/CD
+
 on:
   push:
     branches:
@@ -9,16 +9,17 @@ on:
   pull_request:
     branches:
       - staging
+
 jobs:
   build:
-    runs-on: ubuntu  version 20.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ['14.x', '16.x', '18.x']
+          node-version: '14.x'
       - name: Install Dependencies
         run: npm install
       - name: Build
