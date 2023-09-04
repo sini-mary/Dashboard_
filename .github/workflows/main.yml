@@ -1,13 +1,15 @@
-
 workflow
 name: Next.js CI/CD
 on:
   push:
     branches:
-      - staging
+      - main
+    pull_request:
+    branches:
+      - main 
 jobs:
   build:
-    runs-on: ubuntu  version 20.04
+    runs-on: ubuntu-version 20.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
