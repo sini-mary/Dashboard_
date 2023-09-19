@@ -127,7 +127,6 @@ const DashboardPage: React.FC = () => {
               margin-top:-30px;
             }
           }
-          /* Media query for even smaller screens (e.g., mobile devices) */
           @media screen and (max-width: 480px) {
             .navbar li {
               width: 100%;
