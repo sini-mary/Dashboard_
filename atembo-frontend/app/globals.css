@@ -25,3 +25,28 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@media (max-width: 640px) {
+  .flex {
+    flex-direction: column; 
+  }
+
+  .ml-10 {
+    margin-left: 0; 
+  }
+
+  .ml-60 {
+    margin-left: 0; 
+  }
+
+  .relative {
+    margin-left: 0; 
+  }
+
+  table {
+    font-size: 14px;
+    width: 100%; 
+  }
+
+ 
+}
