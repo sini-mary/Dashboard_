@@ -14,6 +14,7 @@ const DashboardPage = () => {
     { id: '007', location: 'Kawangware', status: 'Working' },
     { id: '008', location: 'AkiraChix', status: 'Not working' },
     { id: '009', location: 'Kakamega', status: 'Working' },
+    { id: '010', location: 'Mombasa', status: 'Working' },
   ];
 
   return (
