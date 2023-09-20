@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 
 function RegistrationPage() {
   const [formData, setFormData] = useState({
-    username: '',
+    firstName: '',
+    lastName: '',
+    userName: '',
     email: '',
-    password: '',
-    confirmPassword: '',
   });
 
   const handleChange = (name: string, value: string) => {
@@ -24,59 +24,59 @@ function RegistrationPage() {
     <div className="flex justify-center items-center h-screen">
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
-            Username
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor=" firstName">
+          FirstName
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="username"
+            id=" firstName"
             type="text"
-            placeholder="Username"
-            name="username"
-            value={formData.username}
-            onChange={(event) => handleChange('username', event.target.value)}
+            placeholder=" firstName"
+            name=" firstName"
+            value={formData. firstName}
+            onChange={(event) => handleChange(' firstName', event.target.value)}
           />
         </div>
         <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor=" lastName">
+          Last Name
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="lastName"
+            type=" lastName"
+            placeholder=" lastName"
+            name="lastName"
+            value={formData.email}
+            onChange={(event) => handleChange('lastName', event.target.value)}
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="userName">
+          UserName
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="userName"
+            type="userName"
+            placeholder="userName"
+            name="userName"
+            value={formData.userName}
+            onChange={(event) => handleChange('userName', event.target.value)}
+          />
+        </div>
+        <div className="mb-6">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-            Email
+          Email
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
-            placeholder="Email"
+            placeholder="email"
             name="email"
             value={formData.email}
             onChange={(event) => handleChange('email', event.target.value)}
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-            Password
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="password"
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={formData.password}
-            onChange={(event) => handleChange('password', event.target.value)}
-          />
-        </div>
-        <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="confirmPassword">
-            Confirm Password
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="confirmPassword"
-            type="password"
-            placeholder="Confirm Password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={(event) => handleChange('confirmPassword', event.target.value)}
           />
         </div>
         <div className="flex items-center justify-between">
