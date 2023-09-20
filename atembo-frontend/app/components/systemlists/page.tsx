@@ -48,6 +48,7 @@ const DashboardPage = () => {
                   </td>
                   <td className={`px-6 py-4 whitespace-no-wrap border-b border-gray-300 ${system.status === 'Working' ? 'text-green-500' : 'text-red-500'}`}>
                     {system.status}
+                    
                   </td>
                 </tr>
               ))}
