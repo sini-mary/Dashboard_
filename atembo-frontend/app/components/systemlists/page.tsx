@@ -17,6 +17,10 @@ const DashboardPage = () => {
 
   return (
         <div className="p-4 ml-4">
+           <h1 style={{ textAlign: 'center', fontWeight: 'bold', color: 'green' }}>
+        SYSTEM LISTS
+      </h1>
+      <br />
           <table className="min-w-full">
             <thead>
               <tr>
