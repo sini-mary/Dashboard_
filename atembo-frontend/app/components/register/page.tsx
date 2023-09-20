@@ -27,7 +27,7 @@ function RegistrationPage() {
       <h1 className="text-green-700 text-4xl mb-4 font-bold">REGISTER TO DASHBOARD</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700  text-2xl mb-2" htmlFor="firstName">
+            <label className="block text-gray-700 mt-4 text-2xl mb-2" htmlFor="firstName">
               First Name
             </label>
             <input
@@ -42,7 +42,7 @@ function RegistrationPage() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700  text-2xl  mb-2" htmlFor="lastName">
+            <label className="block text-gray-700 mt-4 text-2xl  mb-2" htmlFor="lastName">
               Last Name
             </label>
             <input
@@ -57,7 +57,7 @@ function RegistrationPage() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700  text-2xl  mb-2" htmlFor="userName">
+            <label className="block text-gray-700 mt-4 text-2xl  mb-2" htmlFor="userName">
               User Name
             </label>
             <input
@@ -72,11 +72,11 @@ function RegistrationPage() {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700  text-2xl  mb-2" htmlFor="email">
+            <label className="block text-gray-700  mt-4 text-2xl  mb-2" htmlFor="email">
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
               placeholder=""
