@@ -95,7 +95,7 @@ function RegistrationPage() {
             </button>
           </div>
           <div className="text-center font-semi bold text-2xl  mt-4">
-            Already have an account? <a href="#">Login</a>
+            Already have an account? <a href="##">Login</a>
           </div>
         </form>
       </div>
