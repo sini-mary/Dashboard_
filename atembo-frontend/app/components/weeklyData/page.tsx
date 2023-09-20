@@ -36,18 +36,18 @@ const WeeklyData = () => {
         <Line
         data={{
           labels: [
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+            // "08",
+            // "09",
+            // "10",
+            // "11",
+            // "12",
           ],
           datasets: [
             {
@@ -67,7 +67,7 @@ const WeeklyData = () => {
             x: {
               title: {
                 display: true,
-                text: "Time in hours",
+                text: "Days",
               },
             },
           },
@@ -79,18 +79,13 @@ const WeeklyData = () => {
       <Line
         data={{
           labels: [
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
           ],
           datasets: [
             {
