@@ -1,5 +1,4 @@
 import React from 'react';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 
 const DashboardPage = () => {
   const systemList = [
@@ -16,46 +15,51 @@ const DashboardPage = () => {
   ];
 
   return (
-        <div className="p-4 ml-4">
-           <h1 style={{ textAlign: 'center', fontWeight: 'bold', color: 'green' }}>
+    <div className="p-4 ml-4">
+      <h1 style={{ textAlign: 'center', fontWeight: 'bold', color: 'green' }}>
         SYSTEM LISTS
       </h1>
       <br />
-          <table className="min-w-full">
-            <thead>
-              <tr>
-                <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-green-900 tracking-wider">
-                  System ID
-                </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-green-900 tracking-wider">
-                  Location
-                </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-green-900 tracking-wider">
-                  Status
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {systemList.map((system) => (
-                <tr
-                  key={system.id}
-                  className="bg-gray-100 hover:bg-gray-200">
-                  <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300">
-                    {system.id}
-                  </td>
-                  <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300">
-                    {system.location}
-                  </td>
-                  <td className={`px-6 py-4 whitespace-no-wrap border-b border-gray-300 ${system.status === 'Working' ? 'text-green-500' : 'text-red-500'}`}>
-                    {system.status}
-                    
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-   
+      <table className="min-w-full rounded-lg overflow-hidden shadow-lg">
+        <thead>
+          <tr>
+            <th className="px-6 py-3 bg-gray-200 text-left leading-4 text-green-900 tracking-wider">
+              System ID
+            </th>
+            <th className="px-6 py-3 bg-gray-200 text-left leading-4 text-green-900 tracking-wider">
+              Location
+            </th>
+            <th className="px-6 py-3 bg-gray-200 text-left leading-4 text-green-900 tracking-wider">
+              Status
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {systemList.map((system) => (
+            <tr
+              key={system.id}
+              className="bg-gray-100 hover:bg-gray-200 transition duration-300"
+              style={{ borderRadius: '8px', marginBottom: '8px' }} // Add margin-bottom for white space
+            >
+              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300">
+                {system.id}
+              </td>
+              <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-300">
+                {system.location}
+              </td>
+              <td
+                className={`px-6 py-4 whitespace-no-wrap border-b border-gray-300 ${
+                  system.status === 'Working' ? 'text-green-500' : 'text-red-500'
+                }`}
+                style={{ borderRadius: '8px', padding: '8px' }} // Add padding here
+              >
+                {system.status}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
