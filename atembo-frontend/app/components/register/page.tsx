@@ -22,12 +22,12 @@ function RegistrationPage() {
     console.log('Registration data:', formData);
   };
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-200">
-      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div className="flex justify-center items-center h-screen bg-white">
+      <div className="bg-white  rounded px-8 pt-6 pb-8 mb-4">
       <h1 className="text-green-700 text-4xl mb-4 font-bold">REGISTER TO DASHBOARD</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+            <label className="block text-gray-700  text-2xl mb-2" htmlFor="firstName">
               First Name
             </label>
             <input
@@ -42,7 +42,7 @@ function RegistrationPage() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
+            <label className="block text-gray-700  text-2xl  mb-2" htmlFor="lastName">
               Last Name
             </label>
             <input
@@ -57,7 +57,7 @@ function RegistrationPage() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="userName">
+            <label className="block text-gray-700  text-2xl  mb-2" htmlFor="userName">
               User Name
             </label>
             <input
@@ -72,7 +72,7 @@ function RegistrationPage() {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+            <label className="block text-gray-700  text-2xl  mb-2" htmlFor="email">
               Email
             </label>
             <input
@@ -88,13 +88,13 @@ function RegistrationPage() {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-green-700 hover:bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-700 hover:bg-green-500  text-2xl text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Register
             </button>
           </div>
-          <div className="text-center mt-4">
+          <div className="text-center font-semi bold text-2xl  mt-4">
             Already have an account? <a href="#">Login</a>
           </div>
         </form>
