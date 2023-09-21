@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import LoginPage from './components/Login/page'
-import RegistrationPage from './components/register/page'
+import LoginPage from './login/page'
+import RegistrationPage from './register/page'
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
     <main>
      
       <RegistrationPage/>
-      <LoginPage/>
+      {/* <LoginPage/> */}
 
     </main>
   )

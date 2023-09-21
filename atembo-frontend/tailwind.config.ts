@@ -1,5 +1,4 @@
-import type { Config } from 'tailwindcss'
-
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -9,20 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      
-      'module-input': {
-        width: '501px',
-        height: '56px',
-        backgroundColor: '#ECE2E2',
-        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
-      },
-      boxShadow: {
-        'custom': '0 2px 4px rgba(0, 0, 0, 0.4)',
+      colors: {
+        'custom-gray': '#ECE2E2',
+        'custom-green': '#156700',
+        'custom-white': '#FFF',
+        'custom-black': '#000',
       },
     },
   },
