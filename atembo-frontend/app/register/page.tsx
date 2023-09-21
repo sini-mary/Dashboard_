@@ -24,16 +24,16 @@ console.log('Registration data:', formData);
   return (
     <div className="flex justify-center items-center h-screen bg-white">
       <div className="bg-white rounded px-8 pt-6 pb-8 mb-4 shadow-[0 2px 4px rgba(0, 0, 0, 0.4)]">
-        <h1 className="text-custom-green text-4xl mb-4 font-bold">REGISTER TO DASHBOARD</h1>
+        <h1 className="text-green text-4xl mb-4 font-bold">REGISTER TO DASHBOARD</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="firstName" className="block text-custom-black mt-4 text-2xl mb-2">
-              First Name
+            <label htmlFor=" Full Name" className="block text-black mt-4 text-2xl mb-2">
+              Full Name
             </label>
             <input
-              className="shadow-lg appearance-none rounded-lg bg-custom-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-custom-blackleading-tight focus:outline-none focus:shadow-outline"
+              className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-blackleading-tight focus:outline-none focus:shadow-outline"
 
-              id="firstName"
+              id=" Full Name"
               type="text"
               placeholder=""
               name="firstName"
@@ -42,11 +42,11 @@ console.log('Registration data:', formData);
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="lastName" className="block text-custom-black mt-4 text-2xl mb-2">
-              Last Name
+            <label htmlFor="lastName" className="block text-black mt-4 text-2xl mb-2">
+              User Name
             </label>
             <input
-              className="shadow-lg appearance-none rounded-lg bg-custom-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-ccustom-black leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
 
               id="lastName"
               type="text"
@@ -57,11 +57,11 @@ console.log('Registration data:', formData);
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="userName" className="block text-custom-black  mt-4 text-2xl mb-2">
-              User Name
+            <label htmlFor="userName" className="block text-black  mt-4 text-2xl mb-2">
+            Email
             </label>
             <input
-            className="shadow-lg appearance-none rounded-lg bg-custom-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-custom-black leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
 
               id="userName"
               type="text"
@@ -72,11 +72,11 @@ console.log('Registration data:', formData);
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="email" className="block text-custom-black  mt-4 text-2xl mb-2">
-              Email
+            <label htmlFor="email" className="block text-black  mt-4 text-2xl mb-2">
+              Password
             </label>
             <input
-             className="shadow-lg appearance-none rounded-lg bg-custom-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-custom-black leading-tight focus:outline-none focus:shadow-outline"
+             className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
 
               id="email"
               type="email"
@@ -88,15 +88,16 @@ console.log('Registration data:', formData);
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-custom-green hover:bg-custom-green text-2xl text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green hover:bg-green text-2xl text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Register
             </button>
           </div>
-          <div className="text-center font-semibold text-2xl mt-4">
+          <div className="text-left font-semibold text-2xl mt-4">
             Already have an account? 
-            <Link href ="/login"> <span>Login</span></Link>
+            <Link href="/login"><span className="text-green p-1 m-1">Login</span></Link>
+
           </div>
         </form>
       </div>
