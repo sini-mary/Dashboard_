@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import DashboardPage from './components/systemlists/page'
+import SystemlistsPage from './components/systemlists/page'
 
 export default function Home() {
   return (
     <main>
-      <DashboardPage/>
+      <SystemlistsPage/>
     </main>
   )
 }
