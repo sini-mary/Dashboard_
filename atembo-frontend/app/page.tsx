@@ -1,4 +1,5 @@
 import Image from 'next/image'
+"use client";
 import WeeklyData from './components/weeklyData/page'
 
 export default function Home() {
