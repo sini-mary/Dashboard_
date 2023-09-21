@@ -1,6 +1,6 @@
 import Image from 'next/image'
 "use client";
-import WeeklyData from './components/weeklyData/page'
+import WeeklyData from './Components/weeklyData/Data'
 
 export default function Home() {
   return (

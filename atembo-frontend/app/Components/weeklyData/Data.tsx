@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
-import '../weeklyData/css/styles.css';   
+import './css/styles.css';
 import { Chart as ChartJS, CategoryScale, LinearScale, Tooltip, PointElement, LineElement } from "chart.js";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip);
@@ -82,7 +82,7 @@ const MyLineChart = () => {
   };
 
   return (
-    <div className="w-3/4 mx-auto p-4">
+    <div className="w-3/4 mx-auto p-4 bg-white-300">
       <h2 className="text-green-900 font-bold text-4xl mb-4 mx-auto text-center">SYSTEM PERFORMANCE</h2>
       <p className="mx-auto text-center text-[#312e2e] font-['Inter'] italic leading-[normal]">
         View all information and check live status of the Urban Verde System
@@ -91,9 +91,22 @@ const MyLineChart = () => {
       <h2 className="font-bold">System ID 2233</h2>
       <br />
       <div>
-        <label className="flex justify-end">
-          Select Time Range:
-          <select value={timeRange} onChange={(e) => handleTimeRangeChange(e.target.value as TimeRange)}>
+        <label className="flex justify-end ">
+          Select Time Range: 
+          <select value={timeRange} onChange={(e) => handleTimeRangeChange(e.target.value as TimeRange)}
+            style={{
+              backgroundColor: 'white',
+              color: 'green',
+              padding: '5px',
+              width: '15%',
+              border: 'solid 2px gray',
+              borderRadius:'10px',
+              paddingLeft:'10px',
+              marginLeft: '10px',
+              marginTop:'-3px'
+              
+            }} >
+
             <option value={TimeRange.Days}>Days</option>
             <option value={TimeRange.Weeks}>Weeks</option>
             <option value={TimeRange.Months}>Months</option>
