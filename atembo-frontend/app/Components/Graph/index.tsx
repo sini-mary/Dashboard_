@@ -35,30 +35,7 @@ const Graph= () => {
             },
           }}
         />
-        <style>
-          {`
-                  @media (max-width: 768px) {
-            .w-full {
-              width: 190%;
-              margin-left:-90px;
-              margin-top:690px;
-            }
-            .lg\:h-[50vh] {
-              display: none;
-            }
-          }
-          @media (max-width: 300px) {
-            .w-full {
-              width: 190%;
-              margin-left:-90px;
-              margin-top:640px;
-            }
-          }
-
-
-          `
-          }
-        </style>
+      
       </div>
     </>
   );
