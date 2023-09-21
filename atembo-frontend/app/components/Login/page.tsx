@@ -27,14 +27,14 @@ function LoginPage() {
             User Name
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow-lg appearance-none rounded-lg bg-red-100 hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="username"
             type="username"
             placeholder=""
             name="username"
             value={formData.username}
             onChange={(event) => handleChange('username', event.target.value)}
-            style={{ width: '501px', height: '56px', backgroundColor: '#ECE2E2', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}
+           
           />
         </div>
         <div className="mb-6">
@@ -43,14 +43,14 @@ function LoginPage() {
           </label>
 
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+             className="shadow-lg appearance-none rounded-lg bg-red-100 hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
             placeholder=""
             name="password"
             value={formData.password}
             onChange={(event) => handleChange('password', event.target.value)}
-            style={{ width: '501px', height: '56px', backgroundColor: '#ECE2E2', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.4)' }}
+        
           />
         </div>
         <div className="flex items-center justify-between">
