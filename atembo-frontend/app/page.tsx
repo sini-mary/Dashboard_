@@ -1,15 +1,12 @@
-import Image from 'next/image'
-import LoginPage from './login/page'
-import RegistrationPage from './register/page'
-
+import HomePage from './Components/HomePage/index';
+import RegistrationPage from './register/page';
 export default function Home() {
   return (
-
     <main>
-     
-      <RegistrationPage/>
-      {/* <LoginPage/> */}
-
+      <div>
+        <HomePage />
+        <RegistrationPage/>
+      </div>
     </main>
-  )
+  );
 }
