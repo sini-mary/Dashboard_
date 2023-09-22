@@ -29,9 +29,8 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
-    },
+  },
   },
   plugins: [],
-};
+};;;
 export default config;
-
