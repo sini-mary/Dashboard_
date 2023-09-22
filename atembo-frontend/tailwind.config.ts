@@ -19,6 +19,10 @@ const config: Config = {
         'gray-light':'#D9D9D9',
         'green-light': '#B4FCA2',
         'dark-grey':'#312e2e',
+        'red': '#f01111',
+        'blue': '#211ed4',
+        'purple': '#9c2db5',
+        'white': '#fcfcfc',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
