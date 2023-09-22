@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'custom-gray': '#ECE2E2',
-        'custom-green': '#156700',
-        'custom-white': '#FFF',
-        'custom-black': '#000',
-        'custom-red': '#E50E0E', 
+        gray: '#E5E5E5',
+        green: '#156700',
+        white: '#FFF',
+        black: '#000',
+        red: '#E50E0E', 
       },
     },
   },
