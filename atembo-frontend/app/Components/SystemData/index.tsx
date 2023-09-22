@@ -83,7 +83,7 @@ const MyLineChart = () => {
   return (
     <div className="w-3/4 mx-auto p-4 ">
       <h2 className="text-green-900 font-bold text-4xl mb-4 mx-auto text-center">SYSTEM PERFORMANCE</h2>
-      <p className="mx-auto text-center text-[#312e2e] font-['Inter'] italic leading-[normal]">
+      <p className="mx-auto text-center text-dark-grey font-['Inter'] italic leading-[normal]">
         View all information and check live status of the Urban Verde System
       </p>
       <br />

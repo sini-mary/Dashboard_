@@ -18,6 +18,7 @@ const config: Config = {
         'gray': '#8492A6',
         'gray-light':'#D9D9D9',
         'green-light': '#B4FCA2',
+        'dark-grey':'#312e2e',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
