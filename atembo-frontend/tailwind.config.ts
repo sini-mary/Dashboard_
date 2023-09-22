@@ -14,20 +14,36 @@ const config: Config = {
         xl: '1440px',
       },
       colors: {
-        'green': '#156700',
-        'gray': '#8492A6',
-        'gray-light':'#D9D9D9',
-        'green-light': '#B4FCA2',
-        'dark-grey':'#312e2e',
-        'red': '#f01111',
-        'blue': '#211ed4',
-        'purple': '#9c2db5',
-        'white': '#fcfcfc',
+        atembo: {
+          green: {
+            200: '#B4FCA2',
+            900: '#156700'
+
+          },
+          gray: {
+            200: '#D9D9D9',
+            500: '#8492A6',
+            900: '#312e2e',
+          },
+          red: {
+            900: '#f01111',
+          },
+          blue: {
+            700: '#211ed4',
+          },
+          purple: {
+            900: '#9c2db5',
+          },
+          white: {
+            900: '#fcfcfc',
+          }
+        }
+
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
-  },
+    },
   },
   plugins: [],
 }
