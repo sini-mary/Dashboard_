@@ -1,10 +1,18 @@
-import Image from 'next/image'
-import SystemlistsPage from './components/systemlists/page'
+import RegistrationPage from './register/page';
+import HomePage from './Components/HomePage';
+import SystemlistsPage from './systemlists/page';
 
 export default function Home() {
   return (
     <main>
-      <SystemlistsPage/>
+      <div>
+        <HomePage />
+        {/* <RegistrationPage/>
+        <SystemlistsPage/> */}
+        
+      </div>
     </main>
-  )
+  );
 }
+
+

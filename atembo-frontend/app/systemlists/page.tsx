@@ -15,7 +15,7 @@ const SystemlistsPage = () => {
   ];
 
   return (
-    <div className="p-50 ml-0 text-center">
+    <div className="p-4 text-center pt-6 mt-20"> 
       <h1 className="text-4xl text-green font-bold mb-4">
         SYSTEM LISTS
       </h1>
