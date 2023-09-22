@@ -3,9 +3,17 @@ import "tailwindcss/tailwind.css";
 import React, { useState, useEffect } from 'react';
 import {  FaList, FaTachometerAlt, FaBars, FaTimes } from 'react-icons/fa';
 import Link from "next/link";
+
 const Sidebar: React.FC = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+
+  const [isButtonActive, setIsButtonActive] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsButtonActive(!isButtonActive);
+  };
 
   const toggleSidebar = () => {
     setIsSidebarCollapsed(!isSidebarCollapsed); 
@@ -58,14 +66,23 @@ const Sidebar: React.FC = () => {
           </div>
         </div>
         <ul className={`p-2 ${isSidebarCollapsed ? 'hidden' : ''}`}>
-        <li className="flex py-4 text-green-900 font-bold ml-10 hover:bg-green-500 hover:text-white hover:rounded-lg hover:px-2 transition-all duration-300 cursor-pointer items-center">
-        <Link href ="/homePage">
-          <div className={`text-green-500 mr-2 ${isSidebarCollapsed ? 'md:w-20 md:h-20' : ''}`}>
-            <FaTachometerAlt />
-          </div>
-        </Link>
-        <span className=" capitalize text-xl">DASHBOARD</span>
-      </li>
+        <li
+  className={`flex py-4 text-green-700 font-bold ml-10 hover:bg-green-500 hover:text-white hover:rounded-lg hover:px-2 transition-all duration-600 cursor-pointer items-center ${
+    isButtonActive ? 'active-button' : ''
+  }`}
+  onClick={handleButtonClick}
+>
+  <Link href="/homePage">
+    <div
+      className={`text-green-500 mr-2 ${
+        isSidebarCollapsed ? 'md:w-20 md:h-20' : ''
+      }`}
+    >
+      <FaTachometerAlt />
+    </div>
+  </Link>
+  <span className="capitalize text-xl">DASHBOARD</span>
+</li>
           <li className="flex py-4 text-green-900 font-bold ml-10 hover:bg-green-500 hover:text-white hover:rounded-lg hover:px-2 transition-all duration-300 cursor-pointer items-center">
             <FaList className={`text-green-500 mr-2 ${isSidebarCollapsed ? 'md:w-20 md:h-20' : ''}`} />
             <span className="list capitalize text-xl">SYSTEM LIST</span>
@@ -73,9 +90,28 @@ const Sidebar: React.FC = () => {
         </ul>
         <div className="flex-grow"></div>
         <div className="p-4"></div>
+        <style>
+      {`
+      .active-button {
+        background-color: #22C55E; 
+        color: white;            
+        border-left:  solid #22C55E; 
+        border-radius:6px;
+      }
+      
+      .active-button:hover {
+        background-color: #00FF00.; 
+      }
+
+      
+      `}
+    </style>
+
+    
       </div>
       <div className={`flex-grow bg-white ${isMobile && isSidebarCollapsed ? 'md:w-60' : ''}`} onClick={closeSidebar}></div>
     </div>
+  
   );
 };
 
