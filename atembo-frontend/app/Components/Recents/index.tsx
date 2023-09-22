@@ -1,8 +1,6 @@
 import "tailwindcss/tailwind.css";
 import React from 'react';
-
-
-
+import Link from "next/link";
 const Recents: React.FC = () => {
     const systems = [
         { id: 'hdef533', status: 'Working' },
@@ -10,12 +8,10 @@ const Recents: React.FC = () => {
         { id: 'hf4u333', status: 'Working' },
         { id: 'hf4u333', status: 'Working' },
         { id: 'hf4u333', status: 'Working' },
-    
-    
       ];
       return(
 <div>
-     <div className="bg-green-100 ml-[50px] w-[450px] h-[42vh] mt-[130px] rounded-xl flex-column">
+     <div className="bg-green-100 ml-[50px] w-[450px] h-[42vh] mt-[130px] rounded-xl flex-column body">
 <div className="p-3">
 <table className="min-w-full">
 <thead>
@@ -53,17 +49,68 @@ const Recents: React.FC = () => {
       <div className="bg-[#D9D9D9] w-[45%] h-[20vh] rounded-xl s2 ">
         <p className="text-[#156700] font-bold ml-[45px] pt-10 text-xl b">Last Visit</p>
         <p className="num2 text-[#156700] ml-[50px] mt-5">2/11/2023</p>
-
       </div>
+
+      {/* <div className="flex items-center ">
+  <Link href="/register">
+    <button
+      className="bg-green hover:bg-green text-1xl text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-70"
+      type="submit"
+    >
+      Get started
+    </button>
+  </Link>
+</div> */}
+
       </div>
 </div>
-
-
+<style>
+          {`
+          @media (max-width: 768px) {
+            .body{
+              margin-left:-275px;
+              margin-top:900px;
+              width:350px;
+              height:50vh;
+              padding-bottom:20px;
+            }
+            .num{
+              margin-left:70px;
+              margin-top:-10px
+            }
+            .flex.gap-5{
+              margin-top:50px;
+            }
+          }
+          @media (max-width: 300px) {
+            .body{
+              margin-left:-275px;
+              margin-top:900px;
+              width:350px;
+              height:50vh;
+              padding-bottom:20px;
+            }
+            .num{
+              margin-left:70px;
+              margin-top:-10px
+            }
+            .flex.gap-5{
+              margin-top:50px;
+            }
+          }
+          `
+          }
+        </style>
         </div>
       )
-
-
 }
-
-
 export default Recents;
+
+
+
+
+
+
+
+
+

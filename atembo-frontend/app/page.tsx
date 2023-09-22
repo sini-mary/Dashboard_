@@ -1,12 +1,18 @@
-import HomePage from './Components/HomePage/index';
 import RegistrationPage from './register/page';
+import HomePage from './Components/HomePage';
+import SystemlistsPage from './systemlists/page';
+
 export default function Home() {
   return (
     <main>
       <div>
         <HomePage />
-        <RegistrationPage/>
+        {/* <RegistrationPage/>
+        <SystemlistsPage/> */}
+        
       </div>
     </main>
   );
 }
+
+
