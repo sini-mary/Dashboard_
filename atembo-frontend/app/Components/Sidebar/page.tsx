@@ -83,7 +83,7 @@ const Sidebar: React.FC = () => {
   </Link>
   <span className="capitalize text-xl">DASHBOARD</span>
 </li>
-          <li className="flex py-4 text-green-900 font-bold ml-10 hover:bg-green-500 hover:text-white hover:rounded-lg hover:px-2 transition-all duration-300 cursor-pointer items-center">
+          <li className="flex mt-6 py-4 text-green-900 font-bold ml-10 hover:bg-green-500 hover:text-white hover:rounded-lg hover:px-2 transition-all duration-300 cursor-pointer items-center">
             <FaList className={`text-green-500 mr-2 ${isSidebarCollapsed ? 'md:w-20 md:h-20' : ''}`} />
             <span className="list capitalize text-xl">SYSTEM LIST</span>
           </li>
