@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
-import './css/styles.css';
 import { Chart as ChartJS, CategoryScale, LinearScale, Tooltip, PointElement, LineElement } from "chart.js";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip);
@@ -16,10 +15,10 @@ const MyLineChart = () => {
 
   const dataOptions = {
     [TimeRange.Days]: {
-      labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+      labels: ["0", "02", "04", "06", "08", "10", "12", "14", "16", "18", "20", "22", "24"],
       datasets: [
         {
-          data: [0, 3, 11, 27, 10, 13, 18, 19, 14, 29, 28, 32],
+          data: [0, 7, 3, 11, 27, 10, 13, 18, 19, 14, 29, 28, 32],
           label: "Temperature",
           backgroundColor: "red",
         },
@@ -41,7 +40,7 @@ const MyLineChart = () => {
         {
           data: [13, 22, 15, 10, 22, 24, 28],
           label: "Water Flow Rate",
-          backgroundColor: "blue",
+          backgroundColor: "red",
         },
       ],
     },
@@ -82,7 +81,7 @@ const MyLineChart = () => {
   };
 
   return (
-    <div className="w-3/4 mx-auto p-4 bg-white-300">
+    <div className="w-3/4 mx-auto p-4 ">
       <h2 className="text-green-900 font-bold text-4xl mb-4 mx-auto text-center">SYSTEM PERFORMANCE</h2>
       <p className="mx-auto text-center text-[#312e2e] font-['Inter'] italic leading-[normal]">
         View all information and check live status of the Urban Verde System
@@ -92,21 +91,11 @@ const MyLineChart = () => {
       <br />
       <div>
         <label className="flex justify-end ">
-          Select Time Range: 
-          <select value={timeRange} onChange={(e) => handleTimeRangeChange(e.target.value as TimeRange)}
-            style={{
-              backgroundColor: 'white',
-              color: 'green',
-              padding: '5px',
-              width: '15%',
-              border: 'solid 2px gray',
-              borderRadius:'10px',
-              paddingLeft:'10px',
-              marginLeft: '10px',
-              marginTop:'-3px'
-              
-            }} >
-
+          Select Time Range:
+          <select
+            value={timeRange}
+            onChange={(e) => handleTimeRangeChange(e.target.value as TimeRange)}
+            className="bg-white text-green-700 border-[solid-gray] p-[5px] w-[15%] border-solid border-2 border-gray-500 rounded-lg pl-1 ml-4 -mt-2 mr-3 ">
             <option value={TimeRange.Days}>Days</option>
             <option value={TimeRange.Weeks}>Weeks</option>
             <option value={TimeRange.Months}>Months</option>

@@ -1,5 +1,5 @@
 "use client";
-import WeeklyData from './Components/weeklyData/Data'
+import WeeklyData from './Components/systemData'
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
     <main >
 
       
+    </main>
     </main>
     </div>
   )
