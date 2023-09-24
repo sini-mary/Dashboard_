@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import HomePage from './Components/HomePage';
 import RegistrationPage from './register/page';
-import SystemlistsPage from './systemlists/page';
+import SystemlistsPage from './Components/systemlists/page';
 
 const PageRouter = () => {
   const router = useRouter();
