@@ -2,11 +2,10 @@
 import "tailwindcss/tailwind.css";
 import React, { useEffect, useState } from 'react';
 import Graph from "@/app/Components/Graph";
-import { Link } from 'react-router-dom'; 
 import { FaUserPlus, FaDesktop, FaUser } from 'react-icons/fa';
 import Recents from "@/app/Components/Recents";
 import { getDevices,getUsers } from "@/app/Utilities/utils";
-import Sidebar from "../Sidebar/page";
+import Sidebar from "../../Sidebar";
 interface UserApiResponse {
   newClients: number;
   activeUsers: number;
