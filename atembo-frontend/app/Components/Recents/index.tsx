@@ -51,16 +51,6 @@ const Recents: React.FC = () => {
         <p className="num2 text-[#156700] ml-[50px] mt-5">2/11/2023</p>
       </div>
 
-      {/* <div className="flex items-center ">
-  <Link href="/register">
-    <button
-      className="bg-green hover:bg-green text-1xl text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-70"
-      type="submit"
-    >
-      Get started
-    </button>
-  </Link>
-</div> */}
 
       </div>
 </div>
