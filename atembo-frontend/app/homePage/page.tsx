@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 import React, { useEffect, useState } from 'react';
 import Graph from "@/app/Graph";
 import { FaUserPlus, FaDesktop, FaUser } from 'react-icons/fa';
-import Recents from "@/app/Recents";
+import Recents from "@/app/recents";
 import { getDevices,getUsers } from "@/app/Utilities/utils";
 import Sidebar from "../Sidebar";
 interface UserApiResponse {

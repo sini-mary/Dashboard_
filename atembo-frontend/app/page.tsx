@@ -1,6 +1,6 @@
 import Sidebar from './Components/Sidebar';
 import HomePage from './Components/homePage/page';
-import SystemlistsPage from './systemlists/page';
+import SystemlistsPage from './systemLists/page';
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         {/* <HomePage/> */}
 
         {/* <RegistrationPage/>  */}
-        {/* <Sidebar/> */}
+        <Sidebar/>
         {/* <RegistrationPage/>
         <SystemlistsPage/> */}
         

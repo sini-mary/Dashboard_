@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 import React, { useEffect, useState } from 'react';
 import Graph from '../../Graph';
 import { FaUserPlus, FaDesktop, FaUser } from 'react-icons/fa';
-import Recents from '../Recents/index';
+import Recents from '../recents/index';
 import { getDevices, getUsers } from '../../Utilities/utils';
 
 
