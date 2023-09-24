@@ -1,4 +1,4 @@
-import Sidebar from './Components/Sidebar';
+import Sidebar from './Sidebar';
 import HomePage from './Components/homePage/page';
 import SystemlistsPage from './systemLists/page';
 
