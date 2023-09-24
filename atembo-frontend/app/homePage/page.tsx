@@ -5,7 +5,7 @@ import Graph from "@/app/Components/Graph";
 import { FaUserPlus, FaDesktop, FaUser } from 'react-icons/fa';
 import Recents from "@/app/recents";
 import { getDevices,getUsers } from "@/app/Utilities/utils";
-import Sidebar from "../Sidebar";
+import Sidebar from "../Components/Sidebar";
 interface UserApiResponse {
   newClients: number;
   activeUsers: number;
