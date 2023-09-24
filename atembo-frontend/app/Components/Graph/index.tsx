@@ -10,7 +10,7 @@ const Graph= () => {
       {
           data: [80, 40, 60, 70, 80, 50, 100, 120, 100, 39, 47, 70],
           borderColor: 'rgb(53, 162, 235)',
-          backgroundColor: '#156700',
+          backgroundColor:      '#156700',
       },
     ],
   });

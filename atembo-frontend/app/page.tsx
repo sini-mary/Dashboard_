@@ -1,12 +1,15 @@
-import RegistrationPage from './register/page';
-import HomePage from './Components/HomePage';
-import SystemlistsPage from './systemlists/page';
+import Sidebar from './Components/Sidebar';
+import HomePage from './Components/homePage/page';
+import SystemlistsPage from './systemLists/page';
 
 export default function Home() {
   return (
     <main>
       <div>
-        <HomePage />
+        {/* <HomePage/> */}
+
+        {/* <RegistrationPage/>  */}
+        <Sidebar/>
         {/* <RegistrationPage/>
         <SystemlistsPage/> */}
         

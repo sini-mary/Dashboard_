@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-
 const config: Config = {
   content: [
     './components/**/*.{tsx}',
@@ -30,9 +29,8 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
-    },
+  },
   },
   plugins: [],
-};
-
+};;;
 export default config;
