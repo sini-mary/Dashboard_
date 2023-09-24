@@ -1,7 +1,7 @@
 'use client'
 import "tailwindcss/tailwind.css";
 import React, { useEffect, useState } from 'react';
-import Graph from '../Graph';
+import Graph from '../../Graph';
 import { FaUserPlus, FaDesktop, FaUser } from 'react-icons/fa';
 import Recents from '../Recents/index';
 import { getDevices, getUsers } from '../../Utilities/utils';

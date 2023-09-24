@@ -1,11 +1,11 @@
 'use client'
 import "tailwindcss/tailwind.css";
 import React, { useEffect, useState } from 'react';
-import Graph from "@/app/Components/Graph";
+import Graph from "@/app/Graph";
 import { FaUserPlus, FaDesktop, FaUser } from 'react-icons/fa';
-import Recents from "@/app/Components/Recents";
+import Recents from "@/app/Recents";
 import { getDevices,getUsers } from "@/app/Utilities/utils";
-import Sidebar from "../../Sidebar";
+import Sidebar from "../Sidebar";
 interface UserApiResponse {
   newClients: number;
   activeUsers: number;

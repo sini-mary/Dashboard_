@@ -1,6 +1,6 @@
-import Sidebar from './Sidebar';
+import Sidebar from './Components/Sidebar';
 import HomePage from './Components/homePage/page';
-import SystemlistsPage from './Components/systemlists/page';
+import SystemlistsPage from './systemlists/page';
 
 export default function Home() {
   return (
