@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
+
 function LoginPage() {
   const [formData, setFormData] = useState({
     username: '',
@@ -72,7 +73,7 @@ function LoginPage() {
           </button>
         </div>
         <div className="flex items-center justify-between">
-          <Link href="/systemlists">
+          <Link href="/homePage">
             <button
               className="bg-green hover:bg-green text-white text-2xl  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"

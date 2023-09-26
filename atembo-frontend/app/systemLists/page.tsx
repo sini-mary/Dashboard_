@@ -1,5 +1,7 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
+import Layout from '../Components/Layout';
+import Link from 'next/link';
 
 const SystemlistsPage = () => {
   const systemList = [
@@ -8,19 +10,22 @@ const SystemlistsPage = () => {
     { id: '003', location: 'Nakuru', status: 'Working' },
     { id: '004', location: 'Karen', status: 'Working' },
     { id: '005', location: 'Kikuyu', status: 'Not working' },
-    { id: '006', location: 'BabaDo', status: 'Working' },
-    { id: '007', location: 'Kawang', status: 'Working' },
-    { id: '008', location: 'AkiraC', status: 'Not working' },
-    { id: '009', location: 'Kakame', status: 'Working' },
-    { id: '010', location: 'Mombas', status: 'Working' },
+    { id: '006', location: 'BabaDogo', status: 'Working' },
+    { id: '007', location: 'Kawangware', status: 'Working' },
+    { id: '008', location: 'AkiraChix', status: 'Not working' },
+    { id: '009', location: 'Kakamega', status: 'Working' },
+    { id: '010', location: 'Mombasa', status: 'Working' },
   ];
 
   return (
-    <div className="p-4 text-center pt-6 mt-20"> 
-      <h1 className="text-4xl text-green font-bold mb-4">
+    
+    <div>
+      <Layout>
+      
+      <h1 className="text-4xl text-green font-bold mb-4 text-center mt-10">
         SYSTEM LISTS
       </h1>
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center mt-10">
         <table className="w- table-auto rounded-lg overflow-hidden shadow-lg">
           <thead>
             <tr className="bg-gray">
@@ -37,13 +42,16 @@ const SystemlistsPage = () => {
           </thead>
           <tbody>
             {systemList.map((system) => (
+             
               <tr
                 key={system.id}
                 className="bg-gray-100 hover:bg-gray transition duration-300"
               >
+                <Link href={`systemData`}>
                 <td className="px-6 py-4 border-b border-gray text-left pr-6 pl-50">
                   {system.id}
                 </td>
+                </Link>
                 <td className="px-6 py-4 border-b border-gray text-left pr-6 pl-60">
                   {system.location}
                 </td>
@@ -59,6 +67,7 @@ const SystemlistsPage = () => {
           </tbody>
         </table>
       </div>
+      </Layout> 
     </div>
   );
 };

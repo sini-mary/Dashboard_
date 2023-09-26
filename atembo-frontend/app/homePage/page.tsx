@@ -3,9 +3,11 @@ import "tailwindcss/tailwind.css";
 import React, { useEffect, useState } from 'react';
 import Graph from "@/app/Components/Graph";
 import { FaUserPlus, FaDesktop, FaUser } from 'react-icons/fa';
-import Recents from "@/app/recentsLogin";
+import Recents from "../Components/Recents";
 import { getDevices,getUsers } from "@/app/Utilities/utils";
 import Sidebar from "../Components/Sidebar";
+
+
 interface UserApiResponse {
   newClients: number;
   activeUsers: number;
@@ -13,12 +15,15 @@ interface UserApiResponse {
 interface MachineApiResponse {
   totalMachines: number;
 }
+
+
 const HomePage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [newClients, setNewClients] = useState<UserApiResponse>();
   const [totalMachines, setTotalMachines] = useState<MachineApiResponse>();
   const [activeUsers, setActiveUsers] = useState<UserApiResponse>();
-  useEffect(() => {
+  useEffect(() => {// import Sidebar from "../Components/Sidebar";
+
     const fetchData = async () => {
       try {
         const userData = await getUsers();
@@ -38,7 +43,6 @@ const HomePage: React.FC = () => {
 
     <div className="flex h-screen bg-white">
         <Sidebar/>
-
       <div className="flex-column ml-[100px] w-[50%]">
         <p className="xs:ml- text-[#156700] font-bold text-4xl mt-[50px] mb-[-50px] perform ">Overview</p>
         {loading ? (

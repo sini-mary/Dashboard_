@@ -1,21 +1,23 @@
+"use client"
 import Sidebar from './Components/Sidebar';
-import HomePage from './Components/homePage/page';
+import HomePage from './homePage/page';
 import SystemlistsPage from './systemLists/page';
+import RegistrationPage from './register/page';
+import MyLineChart from './systemData/page';
 
 export default function Home() {
   return (
     <main>
       <div>
-        {/* <HomePage/> */}
+        
+        <RegistrationPage/>
 
-        {/* <RegistrationPage/>  */}
-        <Sidebar/>
-        {/* <RegistrationPage/>
-        <SystemlistsPage/> */}
         
       </div>
     </main>
   );
 }
+
+
 
 
