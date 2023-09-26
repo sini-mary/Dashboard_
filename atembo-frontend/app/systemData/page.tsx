@@ -1,6 +1,8 @@
+'use client'
 import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, Tooltip, PointElement, LineElement } from "chart.js";
+import Layout from "../Components/Layout";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip);
 
@@ -81,7 +83,10 @@ const MyLineChart = () => {
   };
 
   return (
+    <div>
+      <Layout>
     <div className="w-3/4 mx-auto p-4 ">
+
 <h2 className="text-green-900 font-bold text-4xl mb-4 mx-auto text-center">SYSTEM PERFORMANCE</h2>      <p className="mx-auto text-center text-dark-grey italic ">
         View all information and check live status of the Urban Verde System
       </p>
@@ -148,6 +153,8 @@ const MyLineChart = () => {
           },
         }}
       />
+    </div>
+    </Layout>
     </div>
   );
 };

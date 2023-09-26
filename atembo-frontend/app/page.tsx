@@ -1,18 +1,23 @@
-"use client";
-import WeeklyData from './Components/SystemData'
+"use client"
+import Sidebar from './Components/Sidebar';
+import HomePage from './homePage/page';
+import SystemlistsPage from './systemLists/page';
+import RegistrationPage from './register/page';
+import MyLineChart from './systemData/page';
 
 export default function Home() {
   return (
-    <div>
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <WeeklyData/>
-    <main >
+    <main>
+      <div>
+        
+        <RegistrationPage/>
 
-      
+        
+      </div>
     </main>
-    </main>
-    </div>
-  )
+  );
 }
+
+
 
 
