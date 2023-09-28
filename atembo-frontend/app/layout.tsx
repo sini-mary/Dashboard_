@@ -3,7 +3,7 @@ import { Inter, Reggae_One } from 'next/font/google'
 
 
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Atembo',
@@ -20,8 +20,9 @@ export default function RootLayout({
     <html>
    
 
-     
-      <body className={inter.className}>{children}       
+<body>{children}       
+
+      {/* <body className={inter.className}>{children}        */}
 </body>
     </html>
   )

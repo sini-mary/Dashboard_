@@ -4,12 +4,25 @@ import React, { useEffect, useState } from 'react';
 import Graph from "@/app/Components/Graph";
 import { FaUserPlus, FaDesktop, FaUser } from 'react-icons/fa';
 import Recents from "../Components/Recents";
+import useGetFlowrate from "../hooks/useGetFlowrate"
 import Sidebar from "../Components/Sidebar";
 
 
 
 
 const HomePage: React.FC = () => {
+  const { flowrate, loading } = useGetFlowrate();
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  const totalFlowrates = flowrate.length;
+  const totalDevices = flowrate.reduce((acc, curr) => acc + curr.device, 0);
+
+  const roundedAverageFlowrate = (
+    flowrate.reduce((acc, curr) => acc + curr.flow_rate, 0) / totalFlowrates
+  ).toFixed(1);
 
   return (
 
@@ -21,18 +34,18 @@ const HomePage: React.FC = () => {
           <div className=" flex mt-24  squares">
             <div className="w-[100%] square1 h-[200px] bg-white rounded-xl smooth-border flex flex-col justify-center items-center shadow-xl border border-gray-300">
               <FaUserPlus className="text-[#156700] text-3xl mb-2" />
-              <p className="words text-center text-[#156700] font-bold">Number Of New Clients</p>
-              <p className="numbers text-4xl text-center text-[#156700] font-bold">3</p>
+              <p className="words text-center text-[#156700] font-bold">Average Flowrate</p>
+              <p className="numbers text-4xl text-center text-[#156700] font-bold">{roundedAverageFlowrate}</p>
             </div>
             <div className="w-[100%] square2 h-[200px] bg-white m-4 mt-[-0px] ml-[60px] rounded-xl smooth-border flex flex-col justify-center items-center shadow-xl border border-gray-300">
               <FaDesktop className="text-[#156700] text-3xl mb-2" />
               <p className="words text-center text-[#156700] font-bold">Total Machines</p>
-              <p className="numbers text-4xl text-center text-[#156700] font-bold">16</p>
+              <p className="numbers text-4xl text-center text-[#156700] font-bold">{totalDevices}</p>
             </div>
             <div className="w-[100%] square3 h-[200px] bg-white m-4 mt-[-0px] ml-[50px] rounded-xl smooth-border flex flex-col justify-center items-center shadow-xl border border-gray-300">
               <FaUser className="text-[#156700] text-3xl mb-2" />
               <p className="words text-center text-[#156700] font-bold">Number of Active Users</p>
-              <p className="numbers text-4xl text-center text-[#156700] font-bold">16</p>
+              <p className="numbers text-4xl text-center text-[#156700] font-bold">{totalFlowrates}</p>
             </div>
           </div>
         )}
