@@ -1,10 +1,15 @@
 'use client'
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 function LoginPage() {
+  const router = useRouter();
+  const signMeIn = () => {
+    ("/homePage")
+}
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -73,14 +78,15 @@ function LoginPage() {
           </button>
         </div>
         <div className="flex items-center justify-between">
-          <Link href="/homePage">
+        
             <button
+              onClick={signMeIn}
               className="bg-green hover:bg-green text-white text-2xl  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
-              Login
+             <Link href="/homePage">Login</Link>
             </button>
-          </Link>
+      
         </div>
         <div className="text-left font-semibold text-2xl mt-4">
           Don't have an account? 

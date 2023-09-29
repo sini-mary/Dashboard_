@@ -1,10 +1,15 @@
 'use client'
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 function RegistrationPage() {
+  const router = useRouter();
+  const signMeIn = () => {
+    ("/login")
+}
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -104,14 +109,16 @@ function RegistrationPage() {
             </button>
           </div>
           <div className="flex items-center justify-between">
-            <Link href="/login">
+      
               <button
+                 onClick={signMeIn}
                 className="bg-green hover:bg-green text-2xl text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
               >
-                Register
+             
+                <Link href="/login">Register</Link>
               </button>
-            </Link>
+           
           </div>
           <div className="text-left font-semibold text-2xl mt-4">
             Already have an account? 

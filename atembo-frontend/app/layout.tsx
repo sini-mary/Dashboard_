@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter, Reggae_One } from 'next/font/google'
+import 'tailwindcss/tailwind.css';
 
 
 
-// const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Atembo',
@@ -22,7 +23,7 @@ export default function RootLayout({
 
 <body>{children}       
 
-      {/* <body className={inter.className}>{children}        */}
+     
 </body>
     </html>
   )
