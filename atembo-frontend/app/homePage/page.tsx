@@ -30,11 +30,7 @@ const HomePage: React.FC = () => {
         <Sidebar/>
       <div className="flex-column ml-[100px] w-[50%]">
         <p className="xs:ml- text-[#156700] font-bold text-4xl mt-[50px] mb-[-50px] perform ">Overview</p>
-        {loading ? (
-          <div className="flex justify-center items-center h-[200px]">
-            <p className="text-[#156700] font-bold">Loading...</p>
-          </div>
-        ) : (
+        {  (
           <div className=" flex mt-24  squares">
             <div className="w-[100%] square1 h-[200px] bg-white rounded-xl smooth-border flex flex-col justify-center items-center shadow-xl border border-gray-300">
               <FaUserPlus className="text-[#156700] text-3xl mb-2" />
