@@ -95,7 +95,7 @@ export default SystemlistsPage;
 
 
 
-// 'use client'
+
 
 // import Layout from '../Components/Layout';
 // import Link from 'next/link';
