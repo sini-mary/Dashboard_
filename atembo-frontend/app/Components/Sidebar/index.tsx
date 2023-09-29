@@ -10,9 +10,9 @@ const Sidebar: React.FC = () => {
   const handleButtonClick = (buttonName: string) => {
     setActiveButton((prevActiveButton) => {
       if (prevActiveButton === buttonName) {
-        return null; // Deactivate the button if it's already active
+        return null; 
       } else {
-        return buttonName; // Activate the button if it's not active
+        return buttonName; 
       }
     });
   };
