@@ -1,8 +1,6 @@
 "use client"
-import Sidebar from './Components/Sidebar';
-import SystemlistsPage from './systemLists/page';
 import RegistrationPage from './register/page';
-import MyLineChart from './systemData/page';
+import 'tailwindcss/tailwind.css';
 
 
 export default function Home() {

@@ -4,6 +4,7 @@ import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, Tooltip, PointElement, LineElement } from "chart.js";
 import Layout from "../Components/Layout";
 import useGetTemperature from "../hooks/useGetFlowrate";
+import useGetTemp from "../hooks/useGetTemp";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip);
 
@@ -15,7 +16,7 @@ enum TimeRange {
 
 const MyLineChart = () => {
   const [timeRange, setTimeRange] = useState(TimeRange.Days);
-  const temperatureData = useGetTemperature();
+  const temperatureData = useGetTemp();
   console.log({ dailyTemp: temperatureData });
 
   const handleTimeRangeChange = (selectedRange: TimeRange) => {

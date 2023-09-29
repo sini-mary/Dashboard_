@@ -1,20 +1,35 @@
-import { getTemp } from "../Utilities/utils";
+
+import { getFlowrate } from "../Utilities/utils";
 import { useEffect,useState } from "react";
-interface TempData{
-    id:number;
-    device:number;
+
+interface FlowrateData{
     time_stamp:string;
-    humidity_with_unit:string;
-    temperature_with_unit:string;
+    flow_rate:number
+    id:number;
+    device:number
 }
-const useGetTemp=()=>{
-    const [temp, setTemp]=useState<TempData[]>([]);
-    useEffect(()=>{
-      (async()=>{
-        const temp=await getTemp();
-        setTemp(temp);
-      })();
-    },[])
-    return {temp}
-}
-export default useGetTemp
+
+
+const useGetFlowrate = () => {
+  const [flowrate, setFlowrate] = useState<FlowrateData[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const flowrateData = await getFlowrate();
+        setFlowrate(flowrateData);
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+  return { flowrate, loading };
+};
+
+export default useGetFlowrate;
