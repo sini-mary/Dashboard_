@@ -12,20 +12,15 @@ import Sidebar from "../Components/Sidebar";
 
 const HomePage: React.FC = () => {
   const { flowrate, loading } = useGetFlowrate();
-
   if (loading) {
     return <p>Loading...</p>;
   }
-
   const totalFlowrates = flowrate.length;
   const totalDevices = flowrate.reduce((acc, curr) => acc + curr.device, 0);
-
   const roundedAverageFlowrate = (
     flowrate.reduce((acc, curr) => acc + curr.flow_rate, 0) / totalFlowrates
   ).toFixed(1);
-
   return (
-
     <div className="flex h-screen bg-white">
         <Sidebar/>
       <div className="flex-column ml-[100px] w-[50%]">
@@ -123,30 +118,3 @@ const HomePage: React.FC = () => {
   );
 };
 export default HomePage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

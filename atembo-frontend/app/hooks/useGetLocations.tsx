@@ -1,4 +1,5 @@
 'use client'
+
 import { getLocations } from "@/app/Utilities/utils";
 import { useEffect, useState } from "react";
 
