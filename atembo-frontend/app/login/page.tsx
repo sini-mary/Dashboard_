@@ -5,7 +5,7 @@ import Link from "next/link";
 import {toast } from 'react-toastify';
 import useLogin from "../hooks/useGetlogin";
 import { useRouter } from "next/navigation";
-import router from "next/navigation";
+
 
 function LoginPage() {
   const [username, setUsername] = useState("");
