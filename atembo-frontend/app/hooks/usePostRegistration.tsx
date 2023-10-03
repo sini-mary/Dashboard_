@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react';
 import { createUser } from '../Utilities/utils';
 
@@ -12,15 +10,20 @@ interface UsersData {
 }
 
 const useCreateUsers = (userData: UsersData) => {
-  const [user, setUser] = useState<UsersData>(userData);
+  const [user, setUser] = useState({});
+  const [error, setError] = useState<string>('');
 
-  const handleRegister = async() =>{
-      const response = await createUser(userData)
-      setUser(response)
-}
+  const handleRegister = async () => {
+    if (!userData.username || !userData.email || !userData.password || !userData.first_name || !userData.last_name) {
+      setError('Please fill in all fields');
+      return;
+    }
+      const createdUser = await createUser(userData);
+      setUser(createdUser);
 
+  };
 
-  return { handleRegister, user };
+  return { handleRegister, user, error };
 };
 
 export default useCreateUsers;

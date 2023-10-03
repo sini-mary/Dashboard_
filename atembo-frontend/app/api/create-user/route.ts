@@ -1,4 +1,6 @@
+
 import { BASE_URL } from "@/config";
+
 export async function POST(request: Request) {
   try {
     if (!BASE_URL) {
@@ -7,22 +9,20 @@ export async function POST(request: Request) {
         statusText: "Failed",
       });
     }
-
-    const body = await request.json();
-
+    const body = await request.json().then(response => response);
     const result = await fetch(`${BASE_URL}/user/`, {
       method: "POST",
+   
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
     });
-
-    const response = await result.json();
-
-    return new Response(JSON.stringify(response), {
-      status: result.status,
-      statusText: result.statusText,
+    const user = await result.json();
+    console.log('users', user);
+    return new Response(JSON.stringify(user), {
+      status: 201,
+      statusText: "Success",
     });
   } catch (error: any) {
     return new Response(error.message, {

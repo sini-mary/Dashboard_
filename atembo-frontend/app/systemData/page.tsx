@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, Tooltip, PointElement, LineElement } from "chart.js";
 import Layout from "../Components/Layout";
-import useGetTemperature from "../hooks/useGetFlowrate";
+
 import useGetTemp from "../hooks/useGetTemp";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip);
