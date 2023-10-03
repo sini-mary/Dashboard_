@@ -12,7 +12,6 @@ export async function POST(request: Request) {
     const body = await request.json().then(response => response);
     const result = await fetch(`${BASE_URL}/user/`, {
       method: "POST",
-      // mode:'no-cors',
       headers: {
         "Content-Type": "application/json",
       },
