@@ -12,6 +12,7 @@ export async function POST(request: Request) {
     const body = await request.json().then(response => response);
     const result = await fetch(`${BASE_URL}/user/`, {
       method: "POST",
+   
       headers: {
         "Content-Type": "application/json",
       },
