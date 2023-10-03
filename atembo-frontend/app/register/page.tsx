@@ -1,8 +1,13 @@
+
+
 'use client'
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
 import useCreateUsers from '../hooks/usePostRegistration';
+import { useRouter } from 'next/navigation';
 
 const RegistrationPage = () => {
   const [username, setUsername] = useState('');
@@ -11,141 +16,162 @@ const RegistrationPage = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const { user, handleRegister } = useCreateUsers({
+  const { handleRegister } = useCreateUsers({
     username,
     email,
     password,
-    first_name:firstName,
-    last_name : lastName
+    first_name: firstName,
+    last_name: lastName,
   });
+  const router = useRouter();
+
+  const handleTogglePassword = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
 
   const handleCreateUser = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
+    
 
-    await handleRegister();
-    if (user) {
-      console.log('User created:', user);
-    } else {
-      console.error('Error creating user');
+    if (!useCreateUsers) {
+      toast.error('Please fill in all fields.', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 5000,
+        hideProgressBar: true,
+      });
+      return;
     }
+
+    const response:any = await handleRegister();
+
+    if (response && response.error) {
+      const { username: usernameError, email: emailError } = response.error;
+
+      if (usernameError && usernameError.includes('already exists')) {
+        toast.error('Username already exists.', {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 5000,
+          hideProgressBar: true,
+        });
+      }
+
+      if (emailError && emailError.includes('already exists')) {
+        toast.error('Email already exists.', {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 5000,
+          hideProgressBar: true,
+        });
+      }
+
+      return;
+    }
+
+    toast.success('You have successfully registered! Please log in.', {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 5000,
+      hideProgressBar: true,
+    });
+    router.push('/login');
+
+    
   };
-console.log(user);
-
-  const handleTogglePassword = () => {
-    setShowPassword(prevShowPassword => !prevShowPassword);
-  };
 
 
-  return (
-    <div className="flex justify-center items-center h-screen bg-white">
-      <div className="bg-white rounded px-8 pt-6 pb-8 mb-4 shadow-[0 2px 4px rgba(0, 0, 0, 0.4)]">
-        <h1 className="text-green text-4xl mb-4 font-bold">REGISTER TO DASHBOARD</h1>
-        <form onSubmit={handleCreateUser}>
-          <div className="mb-4">
-            <label className="block text-black text-2xl mb-2" htmlFor="firstName">
-              First Name
-            </label>
-            <input
-              className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
-              id="firstName"
-              type="text"
-              placeholder=""
-              name="first_name"
-              value={firstName}
-              onChange={e => setFirstName(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-black text-2xl mb-2" htmlFor="lastName">
-              Last Name
-            </label>
-            <input
-              className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
-              id="lastName"
-              type="text"
-              placeholder=""
-              name="last_name"
-              value={lastName}
-              onChange={e => setLastName(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-black text-2xl mb-2" htmlFor="userName">
-              Username
-            </label>
-            <input
-              className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
-              id="userName"
-              type="text"
-              placeholder=""
-              name="username"
-              value={username}
-              onChange={e => setUsername(e.target.value)}
-              required
-              autoComplete="username"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-black text-2xl mb-2" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
-              id="email"
-              type="email"
-              placeholder=""
-              name="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className="mb-4 relative">
-            <label className="block text-black text-2xl mb-2" htmlFor="password">
-              Password
-            </label>
-            <input
-              className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
-              id="password"
-              type={showPassword ? 'text' : 'password'}
-              placeholder=""
-              name="password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              required
-              autoComplete="current-password"
-            />
-            <span
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
-              onClick={handleTogglePassword}
-            >
-              {showPassword ? <FaEye /> : <FaEyeSlash />}
-            </span>
-          </div>
-
-          <div className="flex items-center justify-between mt-8">
-            <button
-              className="bg-green hover:bg-green-dark text-white text-2xl py-2 px-4 rounded"
-              type="submit"
-            >
-              Register
-            </button>
-            <Link href="/login">
-              <p className="inline-block align-baseline font-bold text-sm text-green hover:text-green-darker">
-                Already have an account? Log in.
-              </p>
-            </Link>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
+return (
+<div className="flex justify-center items-center h-screen bg-white">
+<ToastContainer />
+<div className="bg-white rounded px-8 pt-6 pb-8 mb-4 shadow-[0 2px 4px rgba(0, 0, 0, 0.4)]">
+<h1 className="text-green text-4xl mb-4 font-bold">REGISTER TO DASHBOARD</h1>
+<form onSubmit={handleCreateUser}>
+<div className="mb-4">
+<label className="block text-black mt-4 text-2xl mb-2" htmlFor="firstName">
+First Name
+</label>
+<input
+className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-blackleading-tight focus:outline-none focus:shadow-outline"
+id="firstName"
+type="text"
+placeholder="Enter your first name"
+value={firstName}
+onChange={(e) => setFirstName(e.target.value)}
+required
+/>
+</div>
+<div className="mb-4">
+<label className="block text-black text-2xl mb-2" htmlFor="lastName">
+Last Name
+</label>
+<input
+className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-blackleading-tight focus:outline-none focus:shadow-outline"
+id="lastName"
+type="text"
+placeholder="Enter your last name"
+value={lastName}
+onChange={(e) => setLastName(e.target.value)}
+required
+/>
+</div>
+<div className="mb-4">
+<label className="block text-black text-2xl mb-2" htmlFor="username">
+Username
+</label>
+<input
+className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-blackleading-tight focus:outline-none focus:shadow-outline"
+id="username"
+type="text"
+placeholder="Enter your username"
+value={username}
+onChange={(e) => setUsername(e.target.value)}
+required
+/>
+</div>
+<div className="mb-4">
+<label className="block text-black text-2xl mb-2" htmlFor="email">
+Email
+</label>
+<input
+className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-blackleading-tight focus:outline-none focus:shadow-outline"
+id="email"
+type="email"
+placeholder="Enter your email"
+value={email}
+onChange={(e) => setEmail(e.target.value)}
+required
+/>
+</div>
+<div className="mb-4">
+<label className="block text-black text-2xl mb-2" htmlFor="password">
+Password
+</label>
+<div className="relative">
+<input
+className="shadow-lg appearance-none rounded-lg bg-gray hover:shadow-xl h-16 border rounded w-full py-3 px-4 text-blackleading-tight focus:outline-none focus:shadow-outline"
+id="password"
+type={showPassword ? 'text' : 'password'}
+placeholder="Enter your password"
+value={password}
+onChange={(e) => setPassword(e.target.value)}
+required
+/>
+<span className="absolute inset-y-0 right-0 flex items-center pr-2 cursor-pointer" onClick={handleTogglePassword} >
+{showPassword ? <FaEyeSlash className="text-2xl"/> : <FaEye className="text-2xl" />}
+</span>
+</div>
+</div>
+<div className="items-center justify-between">
+<button className="bg-green hover:bg-green-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" >
+Sign Up
+</button>
+<Link href="/login">
+<div className="text-left font-semibold text-[20px] mt-[20px]">
+Already have an account? <span className="text-green p-1 m-1">Log in.</span>
+</div>
+</Link>
+</div>
+</form>
+</div>
+</div>
+);
 };
 
 export default RegistrationPage;
